@@ -14,7 +14,6 @@
   <a href="#"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Weights-Stay%20tuned-yellow" alt="Weights"></a>
 </p>
 
-<br>
 
 <div style="text-align: center; background-color: white;">
     <img src="assets/motivation.png" width=100% >
@@ -56,7 +55,7 @@ We present TraceSpatial, a dataset can enable general VLMs to adapt to spatial t
 
 
 ## Contact
-If you have any questions about the code or the paper, feel free to email Enshen (`zhouenshen@buaa.edu.cn`) and Jingkun (`anjingkun02@gmail.com`). 
+If you have any questions about the code or the paper, feel free to email Enshen (`zhouenshen@buaa.edu.cn`) Yibo (`leeibo@buaa.edu.cn`), and Jingkun (`anjingkun02@gmail.com`). 
 
 
 
@@ -66,7 +65,7 @@ If you have any questions about the code or the paper, feel free to email Enshen
 ## Acknowledgment
 - This repository is built upon the codebase of [NVILA](https://github.com/NVlabs/VILA), [RoboRefer](https://github.com/zhoues/RoboRefer), [MapAnything](https://github.com/facebookresearch/map-anything), [R1-V](https://github.com/Deep-Agent/R1-V).
 
-- We acknowledge [OpenImage](https://storage.googleapis.com/openimages/web/index.html), [CA-1M](https://github.com/apple/ml-cubifyanything), [ScanNet](http://www.scan-net.org), [DROID](https://droid-dataset.github.io/), [AgiBotWorld-Beta](https://huggingface.co/datasets/agibot-world/AgiBotWorld-Beta), [RoboTwin 2.0](https://github.com/robotwin-Platform/robotwin) for their data and assets.
+- We acknowledge [OpenImage](https://storage.googleapis.com/openimages/web/index.html), [CA-1M](https://github.com/apple/ml-cubifyanything), [ScanNet](http://www.scan-net.org), [DROID](https://droid-dataset.github.io/), [AgiBot-Beta](https://huggingface.co/datasets/agibot-world/AgiBotWorld-Beta), [RoboTwin 2.0](https://github.com/robotwin-Platform/robotwin) for their data and assets.
 
 
 
