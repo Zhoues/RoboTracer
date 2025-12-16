@@ -5,7 +5,7 @@
 
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/arXiv-TODO-b31b1b.svg" alt="arXiv"></a>
+  <a href="#"><img src="https://img.shields.io/badge/arXiv-2512.13660-b31b1b.svg" alt="arXiv"></a>
   &nbsp;
   <a href="https://zhoues.github.io/RoboTracer/"><img src="https://img.shields.io/badge/%F0%9F%8F%A0%20Project-Homepage-blue" alt="Project Homepage"></a>
   &nbsp;
@@ -21,7 +21,7 @@
 
 
 ## 🔥 Updates
-[2025-12-16] 🔥🔥🔥 RoboTracer is released on [arxiv](https://arxiv.org/abs/TODO) and the project page is set up at [here](https://zhoues.github.io/RoboTracer/).
+[2025-12-16] 🔥🔥🔥 RoboTracer is released on [arxiv](https://arxiv.org/abs/2512.13660) and the project page is set up at [here](https://zhoues.github.io/RoboTracer/).
 
 
 ## 🕶️Overview
@@ -78,10 +78,10 @@ If you have any questions about the code or the paper, feel free to email Enshen
 
 If you find RoboTracer, TraceSpatial, and TraceSpatial-Bench useful for your research, please cite using this BibTeX:
 ```
-@article{zhou2025roborefer,
-    title={RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for Robotics},
-    author={Zhou, Enshen and An, Jingkun and Chi, Cheng and Han, Yi and Rong, Shanyu and Zhang, Chi and Wang, Pengwei and Wang, Zhongyuan and Huang, Tiejun and Sheng, Lu and others},
-    journal={arXiv preprint arXiv:2506.04308},
+@article{zhou2025robotracer,
+    title={RoboTracer: Mastering Spatial Trace with Reasoning in Vision-Language Models for Robotics},
+    author={Zhou, Enshen and Chi, Cheng and Li, Yibo and An, Jingkun and Zhang, Jiayuan and Rong, Shanyu and Han, Yi and Ji, Yuheng and Liu, Mengzhen and Wang, Pengwei and others},
+    journal={arXiv preprint arXiv:2512.13660},
     year={2025}
 }
 ```
