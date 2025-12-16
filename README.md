@@ -21,7 +21,7 @@
 
 
 ## 🔥 Updates
-[2025-12-16] 🔥🔥🔥 RoboTracer is released on [arxiv](https://arxiv.org/abs/2512.13660) and the project page is set up at [here](https://zhoues.github.io/RoboTracer/).
+[2025-12-16] 🔥🔥🔥 We’ve released RoboTracer, a more powerful version of RoboRefer, on [arxiv](https://arxiv.org/abs/2512.13660) and launched the [project page](https://zhoues.github.io/RoboTracer/). It retains all RoboRefer features while adding multi-step, metric-grounded spatial tracing with explicit reasoning. 
 
 
 ## 🕶️Overview
