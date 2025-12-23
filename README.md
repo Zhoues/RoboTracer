@@ -9,7 +9,7 @@
   &nbsp;
   <a href="https://zhoues.github.io/RoboTracer/"><img src="https://img.shields.io/badge/%F0%9F%8F%A0%20Project-Homepage-blue" alt="Project Homepage"></a>
   &nbsp;
-  <a href="#"><img src="https://img.shields.io/badge/🤗%20Benchmark-TraceSpatial--Bench-green.svg" alt="Benchmark"></a>
+  <a href="https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench"><img src="https://img.shields.io/badge/🤗%20Benchmark-TraceSpatial--Bench-green.svg" alt="Benchmark"></a>
   &nbsp;
   <a href="#"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Weights-Stay%20tuned-yellow" alt="Weights"></a>
 </p>
@@ -21,6 +21,10 @@
 
 
 ## 🔥 Updates
+
+[2025-06-06] TraceSpatial-Bench is released on [HF](https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench). Let's evaluate your model's spatial tracing ability!
+
+
 [2025-12-16] 🔥🔥🔥 We release RoboTracer on [arxiv](https://arxiv.org/abs/2512.13660) and launch the [project page](https://zhoues.github.io/RoboTracer/). It retains all [RoboRefer](https://github.com/zhoues/RoboRefer) (previous version) features while also further supporting multi-step, metric-grounded spatial tracing with explicit reasoning. 
 
 
