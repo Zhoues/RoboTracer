@@ -22,10 +22,39 @@
 
 ## 🔥 Updates
 
-[2025-06-06] TraceSpatial-Bench is released on [HF](https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench). Let's evaluate your model's spatial tracing ability!
+[2025-12-23] TraceSpatial-Bench is released on [HF](https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench). Let's evaluate your model's spatial tracing ability!
 
 
 [2025-12-16] 🔥🔥🔥 We release RoboTracer on [arxiv](https://arxiv.org/abs/2512.13660) and launch the [project page](https://zhoues.github.io/RoboTracer/). It retains all [RoboRefer](https://github.com/zhoues/RoboRefer) (previous version) features while also further supporting multi-step, metric-grounded spatial tracing with explicit reasoning. 
+
+
+## 🤗 Model Zoo &  Dataset & Benchmark
+
+
+<table>
+  <tr>
+    <th>Model/Dataset/Benchmark</th>
+    <th>Note</th>
+  </tr>
+
+  <tr>
+    <td><a href="https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench">TraceSpatial-Bench</a></td>
+    <td> The benchmark for spatial tracing with reasoning. </td>
+  </tr>
+
+</table>
+
+
+## 🔍 Evaluation for TraceSpatial-Bench
+
+
+1. Open the `Evaluation` folder and download the TraceSpatial-Bench from the [model zoo](#-model-zoo---dataset--benchmark).
+    ```bash
+    cd Evaluation
+    git lfs install
+    git clone https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench
+    ```
+
 
 
 ## 🕶️Overview
@@ -50,7 +79,7 @@ We present TraceSpatial, a dataset can enable general VLMs to adapt to spatial t
 
 
 ## TODO
-- [ ] Release TraceSpatial-Bench evaluation code (About 2 week).
+- [x] Release TraceSpatial-Bench evaluation code (About 2 week).
 - [ ] Release the SFT-trained 2B RoboTracer model and inference code (About 1 month).
 - [ ] Release the SFT-trained 8B RoboTracer model (About 2 months).
 - [ ] Release the TraceSpatial Dataset and SFT training code (About 2 months).
