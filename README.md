@@ -22,7 +22,7 @@
 
 ## 🔥 Updates
 
-[2025-12-23] TraceSpatial-Bench is released on [HF](https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench). Let's evaluate your model's spatial tracing ability!
+[2025-12-23] 🔥🔥🔥 TraceSpatial-Bench is released on [HF](https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench). Let's evaluate your model's spatial tracing ability!
 
 
 [2025-12-16] 🔥🔥🔥 We release RoboTracer on [arxiv](https://arxiv.org/abs/2512.13660) and launch the [project page](https://zhoues.github.io/RoboTracer/). It retains all [RoboRefer](https://github.com/zhoues/RoboRefer) (previous version) features while also further supporting multi-step, metric-grounded spatial tracing with explicit reasoning. 
@@ -55,7 +55,52 @@
     git clone https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench
     ```
 
+2. Run the API server for RoboTracer (Coming soon) or General VLM (e.g., Gemini, Qwen, etc.).
+    - For RoboTracer, you can use the API server provided in the [API](https://github.com/Zhoues/RoboTracer/tree/main/API) folder (Coming soon).
+    - For General VLM, you can use the API server provided in the [query_model.py](https://github.com/Zhoues/RoboTracer/blob/main/Evaluation/query_model.py) file. Make sure the api key and base url are set correctly.
 
+3. Run the evaluation script.
+   - `task_name`: `2D`, `3D`, or `all` (evaluate all tasks)
+   - `model_name` selects which model to use:
+     - `RoboTracer_Intrinsics_Depth`: infer Intrinsics + Depth
+     - `RoboTracer_Intrinsics`: infer Intrinsics only
+     - `RoboTracer_RGB`: RGB inference without the universal spatial encoder
+     - `RoboTracer`: use the universal spatial encoder (for RGB inference)
+     - `Gemini3Pro`: Gemini 3 Pro model
+     - ...
+
+    ```bash
+    cd Evaluation
+
+    # For RoboTracer
+    python test_benchmark.py \
+    --model_name RoboTracer_Intrinsics_Depth \
+    --task_name all \
+    --url http://127.0.0.1:25547
+
+    # For General VLM
+    python test_benchmark.py \
+    --model_name Gemini3Pro \
+    --task_name all
+    ```
+
+4. Summarize the results.
+    - The `model_name` must be the same as the one used in the evaluation script (we provide the `RoboTracer_Intrinsics_Depth` and `Gemini3Pro` results in the `Evaluation/outputs` folder for reference).
+    - The `task_name` can be `2D`, `3D`, or `all` to summarize the results for the corresponding task.
+
+    ```bash
+    cd Evaluation
+
+    # For RoboTracer
+    python summarize_acc.py \
+    --model_name RoboTracer_Intrinsics_Depth \
+    --task_name all
+
+    # For General VLM
+    python summarize_acc.py \
+    --model_name Gemini3Pro \
+    --task_name all
+    ```
 
 ## 🕶️Overview
 
