@@ -62,10 +62,10 @@
 3. Run the evaluation script.
    - `task_name`: `2D`, `3D`, or `all` (evaluate all tasks)
    - `model_name` selects which model to use:
-     - `RoboTracer_Intrinsics_Depth`: infer Intrinsics + Depth
-     - `RoboTracer_Intrinsics`: infer Intrinsics only
-     - `RoboTracer_RGB`: RGB inference without the universal spatial encoder
-     - `RoboTracer`: use the universal spatial encoder (for RGB inference)
+     - `RoboTracer_Intrinsics_Depth`: infer with Intrinsics + Depth + RGB using Spaital Encoder.
+     - `RoboTracer_Intrinsics`: infer with Intrinsics + RGB using Spaital Encoder.
+     - `RoboTracer_RGB`: RGB only inference without spatial Encoder.
+     - `RoboTracer`: RGB only inference with spatial Encoder.
      - `Gemini3Pro`: Gemini 3 Pro model
      - ...
 
