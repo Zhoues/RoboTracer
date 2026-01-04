@@ -5,7 +5,7 @@
 
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/arXiv-2512.13660-b31b1b.svg" alt="arXiv"></a>
+  <a href="https://arxiv.org/abs/2512.13660"><img src="https://img.shields.io/badge/arXiv-2512.13660-b31b1b.svg" alt="arXiv"></a>
   &nbsp;
   <a href="https://zhoues.github.io/RoboTracer/"><img src="https://img.shields.io/badge/%F0%9F%8F%A0%20Project-Homepage-blue" alt="Project Homepage"></a>
   &nbsp;
