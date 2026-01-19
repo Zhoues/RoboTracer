@@ -9,10 +9,10 @@ def get_prompt(model_name, task_name, object_name, target_location, prompt):
     if "Gemini" in model_name or "Qwen" in model_name:
         if task_name == "2D":
             prefix = f"You are currently a robot performing robotic manipulation tasks. You have already pick up {object_name}. The task instruction is: move {object_name} to {target_location}."
-            suffix = f"Please predict up to 10 key 2D trajectory points starting from {object_name} to complete the task. Your answer should be formatted as a list of tuples, i.e. [[x1, y1], [x2, y2], ...], where each tuple contains the x, y coordinates. Output the point coordinates in JSON format."
+            suffix = f"Please predict up to 10 key 2D trajectory points starting from the toothpaste on the table to complete the task. Your answer should be formatted as a list of tuples, i.e. [[x1, y1], [x2, y2], ...], where each tuple contains the x and y coordinates of the image. The x and y should be 0-1000 to indicate a point in the image. Output the point coordinates in JSON format."
         elif task_name == "3D":
             prefix = f"You are currently a robot performing robotic manipulation tasks. You have already pick up {object_name}. The task instruction is: move {object_name} to {target_location}."
-            suffix = f"Please predict up to 10 key 3D trajectory points starting from {object_name} to complete the task. Your answer should be formatted as a list of tuples, i.e., [(x1, y1, d1), (x2, y2, d2), ...], where each tuple contains the x and y coordinates of the point, and d is the depth of the point, which unit is meter. Output the point coordinates in JSON format."
+            suffix = f"Please predict up to 10 key 3D trajectory points starting from the pale blue pillow on the sofa which is the second pale blue pillow from the right to complete the task. Your answer should be formatted as a list of tuples, i.e. [[x1, y1, d1], [x2, y2, d2], ...], where each tuple contains the x, y, and depth coordinates of the image. The x and y should be 0-1000 to indicate a point in the image.  The unit of depth is meters. But you never output unit, just output number. Output the point coordinates in JSON format."
         else:
             raise ValueError(f"Unsupported task: {task_name}")
         full_input_instruction = f"{prefix} {suffix}"
@@ -116,8 +116,10 @@ def eval_task(task_name, model_name, model_generate_func, url, output_save_folde
             )
 
             try:
-                if "Claude" in model_name or "GPT4O" in model_name or "Gemini" in model_name or "Qwen" in model_name:
+                if "Claude" in model_name or "GPT4O" in model_name or "Gemini" in model_name:
                     gpt_answer = model_generate_func(image_paths, instruction)
+                elif "Qwen3VL" in model_name:
+                    gpt_answer = model_generate_func(image_paths, instruction, url)
                 elif "RoboTracer" in model_name and "Intrinsics" in model_name and "Depth" in model_name:
                     gpt_answer = model_generate_func(
                         image_paths, instruction, url,
@@ -150,6 +152,7 @@ def eval_task(task_name, model_name, model_generate_func, url, output_save_folde
 
             result = {
                 "question_id": qid,
+                "final_prompt": instruction,
                 "image_path": question["image_path"],
                 "gt_depth_path": question["gt_depth_path"],
                 "mask_path": question["mask_path"],
@@ -195,6 +198,7 @@ if __name__ == '__main__':
     # For Proprietary Models which need to be queried by official API
     model_generate_funcs = {
         'Gemini3Pro': query_gemini_3_pro,
+        'Qwen3VL': query_server,
         'RoboTracer': query_server_spatial_encoder,
         'RoboTracer_Intrinsics_Depth': query_server_spatial_encoder,
         'RoboTracer_Intrinsics': query_server_spatial_encoder,

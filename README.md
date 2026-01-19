@@ -56,8 +56,12 @@
     ```
 
 2. Run the API server for RoboTracer (Coming soon) or General VLM (e.g., Gemini, Qwen, etc.).
-    - For RoboTracer, you can use the API server provided in the [API](https://github.com/Zhoues/RoboTracer/tree/main/API) folder (Coming soon).
-    - For General VLM, you can use the API server provided in the [query_model.py](https://github.com/Zhoues/RoboTracer/blob/main/Evaluation/query_model.py) file. Make sure the api key and base url are set correctly.
+    - For RoboTracer (Coming soon) and Qwen3VL, you can use the API server provided in the [API](https://github.com/Zhoues/RoboTracer/tree/main/API) folder.
+    ```bash
+    cd API
+    python Qwen3VL-8B.py --port 25547 # Make sure the Qwen3VL 4B/8B model is downloaded and correctly replaced the model_name in the code.
+    ```
+    - For General VLM (e.g., Gemini, etc.), you can use the API server provided in the [query_model.py](https://github.com/Zhoues/RoboTracer/blob/main/Evaluation/query_model.py) file. Make sure the api key and base url are set correctly.
 
 3. Run the evaluation script.
    - `task_name`: `2D`, `3D`, or `all` (evaluate all tasks)
@@ -78,6 +82,12 @@
     --task_name all \
     --url http://127.0.0.1:25547
 
+    # For Qwen3VL
+    python test_benchmark.py \
+    --model_name Qwen3VL \
+    --task_name all \
+    --url http://127.0.0.1:25547
+
     # For General VLM
     python test_benchmark.py \
     --model_name Gemini3Pro \
@@ -85,7 +95,7 @@
     ```
 
 4. Summarize the results.
-    - The `model_name` must be the same as the one used in the evaluation script (we provide the `RoboTracer_Intrinsics_Depth` and `Gemini3Pro` results in the `Evaluation/outputs` folder for reference).
+    - The `model_name` must be the same as the one used in the evaluation script (we provide the `RoboTracer_Intrinsics_Depth`, `Qwen3VL`, and `Gemini3Pro` results in the `Evaluation/outputs` folder for reference).
     - The `task_name` can be `2D`, `3D`, or `all` to summarize the results for the corresponding task.
 
     ```bash
@@ -94,6 +104,11 @@
     # For RoboTracer
     python summarize_acc.py \
     --model_name RoboTracer_Intrinsics_Depth \
+    --task_name all
+
+    # For Qwen3VL
+    python summarize_acc.py \
+    --model_name Qwen3VL \
     --task_name all
 
     # For General VLM

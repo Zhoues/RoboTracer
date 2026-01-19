@@ -253,7 +253,7 @@ def query_server(image_paths, prompt, url="http://127.0.0.1:25547", enable_depth
 
     # 3. construct the request body
     request_data = {
-        "image_url": image_url_list,       # base64 编码后的图像列表
+        "image_url": image_url_list,       # base64 encoded image list
         "depth_url": depth_url_list,       # base64 encoded depth images list (may be empty)
         "enable_depth": enable_depth,      # whether to enable depth mode
         "text": prompt                     # user text
