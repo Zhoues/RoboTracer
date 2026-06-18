@@ -22,6 +22,8 @@
 
 ## 🔥 Updates
 
+[2025-12-23] 🔥🔥🔥 RoboTracer get accepted to ECCV 2026! See you in Malmö, Sweden! We will release all trace-related data in the few days!
+
 [2025-12-23] 🔥🔥🔥 TraceSpatial-Bench is released on [HF](https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench). Let's evaluate your model's spatial tracing ability!
 
 
