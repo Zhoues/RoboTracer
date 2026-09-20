@@ -22,12 +22,18 @@
 
 ## 🔥 Updates
 
-[2025-12-23] 🔥🔥🔥 RoboTracer get accepted to ECCV 2026! See you in Malmö, Sweden! We will release all trace-related data in the few days!
 
-[2025-12-23] 🔥🔥🔥 TraceSpatial-Bench is released on [HF](https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench). Let's evaluate your model's spatial tracing ability!
+[2026-09-20] 🔥🔥🔥 We release the TraceSpatial Dataset, which is the first dataset for spatial tracing (i.e., EEF or object 3D keypoint trajectory).
+
+[2026-07-21] 🔥🔥🔥 RoboTracer get accepted to ECCV 2026! See you in Malmö, Sweden! We will release all trace-related data in the few days!
+
+[2026-03-11] 🔥🔥🔥 If you want to enjoy the ability of spatial tracing, try the [RoboBrain 2.5](https://github.com/FlagOpen/RoboBrain2.5) series model!
 
 
-[2025-12-16] 🔥🔥🔥 We release RoboTracer on [arxiv](https://arxiv.org/abs/2512.13660) and launch the [project page](https://zhoues.github.io/RoboTracer/). It retains all [RoboRefer](https://github.com/zhoues/RoboRefer) (previous version) features while also further supporting multi-step, metric-grounded spatial tracing with explicit reasoning. 
+[2025-12-23] TraceSpatial-Bench is released on [HF](https://huggingface.co/datasets/JingkunAn/TraceSpatial-Bench). Let's evaluate your model's spatial tracing ability!
+
+
+[2025-12-16] We release RoboTracer on [arxiv](https://arxiv.org/abs/2512.13660) and launch the [project page](https://zhoues.github.io/RoboTracer/). It retains all [RoboRefer](https://github.com/zhoues/RoboRefer) (previous version) features while also further supporting multi-step, metric-grounded spatial tracing with explicit reasoning. 
 
 
 ## 🤗 Model Zoo &  Dataset & Benchmark
@@ -37,6 +43,11 @@
   <tr>
     <th>Model/Dataset/Benchmark</th>
     <th>Note</th>
+  </tr>
+
+  <tr>
+    <td><a href="https://huggingface.co/datasets/leeibo/TraceSpatial-Trace">TraceSpatial Dataset</a></td>
+    <td> The dataset for spatial tracing with reasoning. </td>
   </tr>
 
   <tr>
@@ -142,10 +153,7 @@ We present TraceSpatial, a dataset can enable general VLMs to adapt to spatial t
 
 ## TODO
 - [x] Release TraceSpatial-Bench evaluation code (About 2 week).
-- [ ] Release the SFT-trained 2B RoboTracer model and inference code (About 1 month).
-- [ ] Release the SFT-trained 8B RoboTracer model (About 2 months).
-- [ ] Release the TraceSpatial Dataset and SFT training code (About 2 months).
-- [ ] Release the RFT-trained RoboTracer model and training code (Maybe 2 months or more).
+- [x] Release the TraceSpatial Dataset and SFT training code (About 2 months).
 - [ ] Release the Dataset Generation Pipeline (Maybe 2 months or more).
 
 
