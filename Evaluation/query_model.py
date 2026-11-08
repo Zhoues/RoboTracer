@@ -102,7 +102,7 @@ def query_api(image_paths, prompt, model_name, retry=100):
                 "User-Agent": "DMXAPI/1.0.0 (https://www.dmxapi.com/)",
             }
 
-            response = requests.post(base_url, headers=headers, json=payload)
+            response = requests.post(base_url, headers=headers, json=payload, timeout=30)
             print(response.json())
             return response.json()["choices"][0]["message"]["content"]
         except Exception as e:
@@ -262,7 +262,7 @@ def query_server(image_paths, prompt, url="http://127.0.0.1:25547", enable_depth
     # 4. send the request and support retry
     for attempt in range(1, retry + 1):
         try:
-            response = requests.post(url + "/query", json=request_data)
+            response = requests.post(url + "/query", json=request_data, timeout=30)
             if response.status_code == 200:
                 # parse the returned JSON data
                 try:
@@ -308,7 +308,7 @@ def query_server_spatial_encoder(image_paths, prompt, url="http://127.0.0.1:2555
     # 2. send the request and support retry
     for attempt in range(1, retry + 1):
         try:
-            response = requests.post(url + "/query", json=request_data)
+            response = requests.post(url + "/query", json=request_data, timeout=30)
             if response.status_code == 200:
                 # parse the returned JSON data
                 try:
